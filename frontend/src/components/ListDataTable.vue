@@ -207,9 +207,9 @@ export default {
      * this function used to get Row
      * it takes first param to use  this.$forceUpdate to up date pagintion or not
      */
-    getData(loader = false) {
+    getData() {
       // turn on loader
-      this.loader = loader
+      this.loader = true
       // send request
       this.axios
         .get(`/${this.listDataApi}`, {
@@ -251,7 +251,7 @@ export default {
       // show popup with success message
       this.popupData.show = true
       this.popupData.text = this.popupMessageAddRow
-      this.getData(true)
+      this.getData()
     },
     navigateToCustomerPage(item) {
       this.$router.push({
@@ -262,7 +262,7 @@ export default {
   },
   created() {
     // fetch data
-    this.getData(true)
+    this.getData()
   },
 }
 </script>

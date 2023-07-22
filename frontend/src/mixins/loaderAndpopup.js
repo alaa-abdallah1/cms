@@ -12,7 +12,9 @@ Vue.mixin({
   }),
 
   mounted() {
-    this.isSmAndDown = this.$vuetify.breakpoint.smAndDown
+    this.isSmAndDown = this.$vuetify
+      ? this.$vuetify.breakpoint.smAndDown
+      : false
 
     window.addEventListener(
       'resize',
