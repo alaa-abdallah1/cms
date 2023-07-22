@@ -1,8 +1,9 @@
 .DS_Store
 node_modules
 proxy/node_modules
+frontend/node_modules
 proxy/dist
-dist
+frontend/dist
 
 # local env files
 .env
