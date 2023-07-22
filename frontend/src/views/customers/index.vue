@@ -102,48 +102,59 @@ export default {
       text: 'Add',
       icon: 'mdi-plus',
     },
-    fieldsSearch: [
-      {
-        component: 'v-text-field',
-        label: 'Email',
-        key: 'email',
-        value: '',
-        width: {
-          md: 4,
-          col: 12,
-        },
-        bindOptions: {
-          dense: true,
-        },
-      },
-      {
-        component: 'v-text-field',
-        label: 'Phone Number',
-        key: 'phone',
-        value: '',
-        width: {
-          md: 4,
-          col: 12,
-        },
-        bindOptions: {
-          dense: true,
-        },
-      },
-    ],
+
     requestSearch: {
       method: 'get',
       url: '/customers',
       type: 'search',
     },
-    btnFormSearch: {
-      icon: 'mdi-magnify',
-      flat: true,
-      text: 'Search',
-      bindOptions: {
-        text: true,
-        outlined: true,
-      },
-    },
   }),
+
+  computed: {
+    fieldsSearch() {
+      return [
+        {
+          component: 'v-text-field',
+          label: 'Email',
+          key: 'email',
+          value: '',
+          width: {
+            md: 4,
+            col: 12,
+          },
+          bindOptions: {
+            dense: true,
+          },
+        },
+        {
+          component: 'v-text-field',
+          label: 'Phone Number',
+          key: 'phone',
+          value: '',
+          width: {
+            md: 4,
+            col: 12,
+          },
+          bindOptions: {
+            dense: true,
+            class: this.isSmAndDown ? 'mt-n8' : '',
+          },
+        },
+      ]
+    },
+
+    btnFormSearch() {
+      return {
+        icon: 'mdi-magnify',
+        flat: true,
+        text: 'Search',
+        bindOptions: {
+          text: true,
+          outlined: true,
+          class: this.isSmAndDown ? 'mb-4 mt-n8' : '',
+        },
+      }
+    },
+  },
 }
 </script>

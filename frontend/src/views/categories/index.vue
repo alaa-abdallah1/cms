@@ -70,48 +70,59 @@ export default {
       text: 'Add',
       icon: 'mdi-plus',
     },
-    fieldsSearch: [
-      {
-        component: 'v-text-field',
-        label: 'Name',
-        key: 'name',
-        value: '',
-        width: {
-          md: 4,
-          col: 12,
-        },
-        bindOptions: {
-          dense: true,
-        },
-      },
-      {
-        component: 'v-text-field',
-        label: 'Reference',
-        key: 'reference',
-        value: '',
-        width: {
-          md: 4,
-          col: 12,
-        },
-        bindOptions: {
-          dense: true,
-        },
-      },
-    ],
+
     requestSearch: {
       method: 'get',
       url: '/categories',
       type: 'search',
     },
-    btnFormSearch: {
-      icon: 'mdi-magnify',
-      text: 'Search',
-      flat: true,
-      bindOptions: {
-        text: true,
-        outlined: true,
-      },
-    },
   }),
+
+  computed: {
+    fieldsSearch() {
+      return [
+        {
+          component: 'v-text-field',
+          label: 'Name',
+          key: 'name',
+          value: '',
+          width: {
+            md: 4,
+            col: 12,
+          },
+          bindOptions: {
+            dense: true,
+          },
+        },
+        {
+          component: 'v-text-field',
+          label: 'Reference',
+          key: 'reference',
+          value: '',
+          width: {
+            md: 4,
+            col: 12,
+          },
+          bindOptions: {
+            dense: true,
+            class: this.isSmAndDown ? 'mt-n8' : '',
+          },
+        },
+      ]
+    },
+
+    btnFormSearch() {
+      return {
+        icon: 'mdi-magnify',
+        text: 'Search',
+        flat: true,
+        bindOptions: {
+          text: true,
+          outlined: true,
+          class: this.isSmAndDown ? 'mb-4 mt-n8' : '',
+        },
+      }
+    },
+  },
 }
 </script>

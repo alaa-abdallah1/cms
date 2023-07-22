@@ -45,17 +45,20 @@ export default {
       url: '/products?include=category',
       type: 'search',
     },
-    btnFormSearch: {
-      icon: 'mdi-magnify',
-      flat: true,
-      text: 'Search',
-      bindOptions: {
-        text: true,
-        outlined: true,
-      },
-    },
   }),
   computed: {
+    btnFormSearch() {
+      return {
+        icon: 'mdi-magnify',
+        flat: true,
+        text: 'Search',
+        bindOptions: {
+          text: true,
+          outlined: true,
+          class: this.isSmAndDown ? 'mb-4 mt-n8' : '',
+        },
+      }
+    },
     fieldsSearch() {
       return [
         {
@@ -77,7 +80,7 @@ export default {
           key: 'category_id',
           value: '',
           width: {
-            md: 6,
+            md: 4,
             col: 12,
           },
           bindOptions: {
@@ -87,6 +90,7 @@ export default {
             dense: true,
             clearable: true,
             menuProps: {offsetY: true},
+            class: this.isSmAndDown ? 'mt-n8' : '',
           },
         },
       ]
