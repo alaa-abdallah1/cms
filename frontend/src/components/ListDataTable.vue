@@ -17,42 +17,64 @@
 
     <v-card class="py-6 elevation-10 my-8">
       <div v-if="loader">
-        <div class="mb-8 px-4 d-flex align-center justify-between">
+        <div class="d-sm-block d-none">
+          <div class="mb-8 px-4 d-flex align-center justify-between">
+            <v-skeleton-loader
+              class="flex-grow-1"
+              type="heading"
+            ></v-skeleton-loader>
+            <v-skeleton-loader
+              type="heading"
+              align="right"
+              width="300"
+            ></v-skeleton-loader>
+          </div>
+
+          <v-container>
+            <v-row class="px-1 mb-1">
+              <v-col cols="4">
+                <v-skeleton-loader type="heading"></v-skeleton-loader>
+              </v-col>
+              <v-col cols="4">
+                <v-skeleton-loader type="heading"></v-skeleton-loader>
+              </v-col>
+              <v-col cols="4">
+                <div>
+                  <v-skeleton-loader
+                    align="right"
+                    class="justify-end"
+                    type="heading"
+                    max-width="400"
+                  ></v-skeleton-loader>
+                </div>
+              </v-col>
+            </v-row>
+          </v-container>
+
+          <v-skeleton-loader type="table-thead"></v-skeleton-loader>
+          <v-skeleton-loader type="table-tbody"></v-skeleton-loader>
+          <v-skeleton-loader type="table-tbody"></v-skeleton-loader>
+        </div>
+        <div class="d-sm-none d-block px-4">
+          <div class="mb-8 d-flex align-center justify-between">
+            <v-skeleton-loader
+              class="flex-grow-1"
+              width="300"
+              type="heading"
+            ></v-skeleton-loader>
+            <v-skeleton-loader
+              type="heading"
+              align="right"
+              width="300"
+            ></v-skeleton-loader>
+          </div>
+          <v-skeleton-loader type="list-item-two-line"></v-skeleton-loader>
           <v-skeleton-loader
-            class="flex-grow-1"
-            type="heading"
-          ></v-skeleton-loader>
-          <v-skeleton-loader
-            type="heading"
-            align="right"
-            width="300"
+            v-for="(n, index) in 8"
+            :key="index"
+            type="list-item-three-line"
           ></v-skeleton-loader>
         </div>
-
-        <v-container>
-          <v-row class="px-1 mb-1">
-            <v-col cols="4">
-              <v-skeleton-loader type="heading"></v-skeleton-loader>
-            </v-col>
-            <v-col cols="4">
-              <v-skeleton-loader type="heading"></v-skeleton-loader>
-            </v-col>
-            <v-col cols="4">
-              <div>
-                <v-skeleton-loader
-                  align="right"
-                  class="justify-end"
-                  type="heading"
-                  max-width="400"
-                ></v-skeleton-loader>
-              </div>
-            </v-col>
-          </v-row>
-        </v-container>
-
-        <v-skeleton-loader type="table-thead"></v-skeleton-loader>
-        <v-skeleton-loader type="table-tbody"></v-skeleton-loader>
-        <v-skeleton-loader type="table-tbody"></v-skeleton-loader>
       </div>
 
       <div v-else>
