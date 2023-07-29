@@ -28,4 +28,4 @@ To use the CMS, follow these steps:
 Contributions to the CMS project are welcome! Please submit a pull request with your changes.
 
 ### Code Owner 
-[Alaa Abdallah](https://github.com/alaa-abdallah1) 
+This project was created by [Alaa Abdallah](https://github.com/alaa-abdallah1)
