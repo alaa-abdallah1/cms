@@ -1,5 +1,5 @@
 // vue.config.js
 module.exports = {
-  transpileDependencies: ['vuetify'],
+  transpileDependencies: ["vuetify"],
   lintOnSave: false,
 }
