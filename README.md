@@ -28,7 +28,7 @@ Here are some screenshots of the main pages:
 ## Installation
 To install and run the CMS project on your local machine, follow these steps:
 
-- Clone the repository: ```git clone https://github.com/username/project-name.git```
+- Clone the repository: ```git clone https://github.com/alaa-abdallah1/cms.git```
 - Go to the project directory ```cd cms```
 - prepare your environment ```cp .env.example .env ``` and add the right values
 - Install dependencies and Start the development server: `npm install && npm run serve`
