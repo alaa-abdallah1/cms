@@ -4,6 +4,27 @@ CMS  is a web application created with Vue.js, Vuetify, and Vue Router that allo
 ## Live Demo
 [View the live demo here](https://cms-zf6p.onrender.com/customers)
 
+## Screenshots
+Here are some screenshots of the main pages:
+
+### ○ Customers Page
+
+<img src="https://github.com/alaa-abdallah1/cms/assets/56931924/3a73441c-f1ab-4282-b09a-5318b4f9b766" width="40%" />
+
+<img src="https://github.com/alaa-abdallah1/cms/assets/56931924/e2bfba27-48b0-4e8f-b9ab-3de5e7561085" width="35%" />
+
+### ○ Categories Page
+
+<img src="https://github.com/alaa-abdallah1/cms/assets/56931924/dfac9684-afbf-4a32-b19e-3f348ec157a4" width="40%" />
+
+<img src="https://github.com/alaa-abdallah1/cms/assets/56931924/c37040f6-7336-4948-ad1a-a00571e96129" width="35%" />
+
+### ○ Products Page
+
+<img src="https://github.com/alaa-abdallah1/cms/assets/56931924/36b346e7-e732-419c-8422-05d8cd10c5f9" width="44%" />
+
+<img src="https://github.com/alaa-abdallah1/cms/assets/56931924/8b92c638-3046-4bf0-b297-6153e411507b" width="35%" />
+
 ## Installation
 To install and run the CMS project on your local machine, follow these steps:
 
